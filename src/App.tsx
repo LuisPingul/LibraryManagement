@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from "react";
 
+import { useState } from 'react';
+
+const App = () => {
+  // 1. Track what the user types in the inputs
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  
+  // 2. Track their login status and role
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [role, setRole] = useState<'admin' | 'student' | null>(null);
 // --- CUSTOM INLINE ICONS (No external dependencies needed!) ---
 const Icon = ({ children, className = "w-6 h-6", ...props }) => (
   <svg
